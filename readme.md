@@ -26,3 +26,9 @@ npm run server
 ```
 npm run build
 ```
+
+- start webpack-server.
+
+```
+npm run dev
+```
