@@ -5,6 +5,9 @@ import { hoursClick } from "./hours-click.js"
 const hours = document.getElementById("hours")
 
 export function hoursLoad({date}){
+  // Clear the schedule list.
+  hours.innerHTML = ""
+
   // only loads the hours
   const opening = openingHours.map((hour) => {
     // creates an array using the data that was separated by : and retrieves only the first element from each position of the array.
