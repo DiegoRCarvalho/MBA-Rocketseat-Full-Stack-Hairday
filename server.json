@@ -1,3 +1,9 @@
 {
-  "schedules": []
+  "schedules": [
+    {
+      "id": 1729885397541,
+      "name": "Diego Carvalho",
+      "when": "2024-10-26T12:00:00.000Z"
+    }
+  ]
 }
