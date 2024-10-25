@@ -4,7 +4,7 @@ import { apiConfig } from "./api-config.js"
 export async function scheduleFetchByDay({date}) {
   try {
     // Make the request.
-    const response = await fetch(`${apiConfig}/schedules`)
+    const response = await fetch(`${apiConfig.baseURL}/schedules`)
 
     // Convert to JSON
     const data = await response.json()
