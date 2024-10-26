@@ -1,5 +1,5 @@
 import { schedulesDay } from "../schedules/load.js"
-import { scheduleCacel } from "../../services/schedule-cancel.js"
+import { scheduleCancel } from "../../services/schedule-cancel.js"
 
 // Select all appointments.
 const periods = document.querySelectorAll(".period")
@@ -18,7 +18,7 @@ periods.forEach((period)=> {
       if(id){
         const isConfirm = confirm("Tem certeza que deseja cancelar o agendamento?")
         if(isConfirm){
-          await scheduleCacel({id})
+          await scheduleCancel({id})
           schedulesDay()
         }  
       }
