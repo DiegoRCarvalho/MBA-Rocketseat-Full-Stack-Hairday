@@ -1,11 +1,14 @@
+import { schedulesDay } from "../schedules/load.js"
+import { scheduleCacel } from "../../services/schedule-cancel.js"
+
 // Select all appointments.
 const periods = document.querySelectorAll(".period")
 
-// Gerar evento de click para cada lista( manhã, tarde e noite)
+// Generate click event for each list (morning, afternoon and evening)
 periods.forEach((period)=> {
 
-  // Generate click event for each list (morning, afternoon and evening)vvvv
-  period.addEventListener("click", (event) =>{
+  // Captures click event
+  period.addEventListener("click", async (event) =>{
     if(event.target.classList.contains("cancel-icon")){
 
       // Captures the ID of the element that was clicked.
@@ -15,7 +18,8 @@ periods.forEach((period)=> {
       if(id){
         const isConfirm = confirm("Tem certeza que deseja cancelar o agendamento?")
         if(isConfirm){
-
+          await scheduleCacel({id})
+          schedulesDay()
         }  
       }
     }
